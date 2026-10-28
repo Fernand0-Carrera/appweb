@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca EPN | Laboratorio Backbone.js</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header class="encabezado">
+      <div>
+        <p class="etiqueta">EPN · APLICACIONES WEB</p>
+        <h1>Biblioteca universitaria</h1>
+        <p class="subtitulo">Laboratorio de modelos, colecciones, vistas y eventos con Backbone.js.</p>
+      </div>
+      <span class="chip">Backbone.js 1.6.1</span>
+    </header>
+
+    <section class="panel" aria-labelledby="titulo-registro">
+      <h2 id="titulo-registro">Registrar libro</h2>
+      <form id="form-libro">
+        <div class="fila-formulario">
+          <label>Título
+            <input id="titulo" name="titulo" placeholder="Ej. Clean Architecture" required maxlength="100">
+          </label>
+          <label>Autor
+            <input id="autor" name="autor" placeholder="Ej. Robert C. Martin" required maxlength="100">
+          </label>
+          <button type="submit" class="boton boton-principal">+ Agregar libro</button>
+        </div>
+        <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-catalogo">
+      <div class="cabecera-seccion">
+        <h2 id="titulo-catalogo">Catálogo de libros</h2>
+        <div class="resumen">
+          <span>Total: <strong id="total">0</strong></span>
+          <span>Disponibles: <strong id="disponibles">0</strong></span>
+          <span>Prestados: <strong id="prestados">0</strong></span>
+        </div>
+      </div>
+      <div id="lista-libros" class="lista-libros" aria-live="polite">
+        <p class="vacio">Aún no hay libros. Continúa con los pasos del tutorial.</p>
+      </div>
+    </section>
+    <footer>Práctica académica · Escuela Politécnica Nacional · Sin backend ni persistencia</footer>
+  </main>
+  <!-- IMPORTANTE: el orden de las bibliotecas es relevante -->
+  <script src="lib/jquery-3.7.1.min.js"></script>
+  <script src="lib/underscore-1.13.7.min.js"></script>
+  <script src="lib/backbone-1.6.1.min.js"></script>
+  <!-- Código del estudiante: primero las clases, luego la aplicación -->
+  <script src="js/modelo.js"></script>
+  <script src="js/coleccion.js"></script>
+  <script src="js/vista.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

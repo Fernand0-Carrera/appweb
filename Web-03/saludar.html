@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introduccion a JS</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <header class="encabezado">
+            <h2>Laboratorio con JavaScript</h2>
+        </header>
+        <nav class="navegacion" aria-label="Menu Principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="saludar.html">Saludar</a></li>
+            </ul>
+        </nav>
+        
+        
+        <main>
+            <section id="inicio" class="bienvenida">
+                <p id="dato"></p>
+            
+                <button onclick="saludar()"> Saludar </button>
+                <p id="resultado"></p>
+            </section>
+            <script src="script.js">
+                //objeto en JS
+                let persona={
+                    nombre: "Fernando",
+                    saludar: function(){
+                        return "Hola "+this.nombre;
+                    }
+                }
+                console.log(persona.saludar())
+                document.getElementById("dato").innerHTML="mensaje "+persona.saludar();
+            </script>
+        
+        </main>
+    </body>
+</html>

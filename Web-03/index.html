@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Portal Academico Universitario</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        
+    </head>
+    <body>
+        <header class="encabezado">
+            <h1>Portal Academico Universitario</h1>
+            <!--<h1>Portal Academico Universitario</h1>
+            <style>
+                h1{
+                    color: blueviolet;
+                }
+            </style>-->
+            <p>Aprendizaje, Innovacion y Tecnologia</p>
+        </header>
+           
+        <nav class="navegacion" aria-label="Menu Principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="saludar.html">Saludar</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <!--contenido principal-->
+        <main>
+            <section id="inicio" class="bienvenida" >
+                <h2 style="color: rgb(7, 6, 6);">Bienvenidos al Portal Academico</h2>
+                <p>Este espacio esta diseniado para compartir 
+                    informacion sobre asignaturas
+                </p>
+                <img src="img/epn.jpeg" 
+                alt="campus universitario"
+                class="imagen-principal" width="300" height="300">
+
+            </section>
+
+            <section id="cursos" class="seccion-cursos">
+                <h2>Nuestras asignaturas</h2>
+                <div class="contenedor-cursos">
+                    <article class="tarjeta">
+                        <h3>Base de datos</h3>
+                        <p>Modelado relacional y consulta SQL</p>
+                        <a href="#contacto">Mas informacion</a>
+                    </article>
+                    <article class="tarjeta">
+                        <h3>Ingenieria de software</h3>
+                        <p>Requisitos, arquitectura y pruebas</p>
+                        <a href="#contacto">Mas informacion</a>
+                    </article>
+                    <article class="tarjeta">
+                        <h3>Desarrollo web</h3>
+                        <p>Introduccion a html, css y JavaScript</p>
+                        <a href="#contacto">Mas informacion</a>
+                    </article>
+                </div>
+            </section>
+
+            
+            <section class="laboratorio-animacion" id="animaciones">
+                <h2>Laboratorio de animaciones</h2>
+                <p>
+                    Observa cómo una figura se desplaza y cambia de color
+                    utilizando animaciones CSS.
+                </p>
+
+                <div class="escenario">
+                    <div class="pelota"></div>
+                </div>
+            </section>
+
+
+            <section id="noticias" class="noticias">
+                <h2>Noticias academicas</h2>
+                <article>
+                    <h3>Nuevo Laboratorio de desarrollo web</h3>
+                    <p>Los estudiantes desarrollan proyectos web modernos</p>
+                    <time datetime="2026-10-14">
+                        14 de octubre de 2026
+                    </time>
+                </article>
+            </section>
+
+            
+            <section class="horario">
+                <h2>Horario académico semanal</h2>
+
+                <div class="tabla-responsive"
+                    role="region"
+                    aria-label="Horario académico"
+                    tabindex="0">
+
+                    <table>
+                        <caption>Horario de clases</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Asignatura</th>
+                                <th scope="col">Lunes</th>
+                                <th scope="col">Martes</th>
+                                <th scope="col">Miércoles</th>
+                                <th scope="col">Jueves</th>
+                                <th scope="col">Viernes</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Base de datos</th>
+                                <td>08:00</td>
+                                <td>—</td>
+                                <td>08:00</td>
+                                <td>—</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ingeniería de software</th>
+                                <td>—</td>
+                                <td>10:00</td>
+                                <td>—</td>
+                                <td>08:00</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Desarrollo web</th>
+                                <td>10:00</td>
+                                <td>08:00</td>
+                                <td>—</td>
+                                <td>10:00</td>
+                                <td>08:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="contacto" class="contacto">
+                <h2>Contactanos</h2>
+                <form action="https://httweb.org/post" method="post">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" id="correo" name="correo" required>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+            
+        </main>
+        <footer class="pie-pagina">
+            <p>
+                &copy; 2026 Portal Academico Universitario.
+                Todos los derechos reservados
+            </p>
+            <p>Desarrollo web</p>
+        </footer>
+        
+    </body>
+</html>
