@@ -40,5 +40,28 @@ function renderizarLista(){
     actualizarResumen();
 }
 
+//agregar y eliminar
+biblioteca.on("add remove reset", renderizarLista);
+//los eventos emitidos en los modelos prestados!!
+biblioteca.on("change:prestado",actualizarResumen);
+//form
+$("#form-libro").on("submit",function(evento){
+    evento.preventDefault();
+
+    const titulo=$("#titulo").val().trim();
+    const autor=$("#autor").val().trim();
+    const libro= new Libro({titulo,autor});
+
+    if(!libro.isValid()){
+        $("#mensaje").addClass("error").text(libro.validationError);
+        return;
+    };
+
+    biblioteca.add(libro);
+    this.reset();
+    $("#mensaje").removeClass("error").text("libro regustrado correctamente");
+    $("#titulo").trigger("focus");
+})
+
 renderizarLista();
 window.bibliotecaEPN=biblioteca;
